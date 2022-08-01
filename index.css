@@ -1,0 +1,643 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    /* color: white; */
+}
+
+
+/* Hero */
+
+.hero--container {
+    min-width: 100%;
+    min-height: 100vh;
+    background: url(./img/main.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.hero--nav--container{
+    padding: 0 8.75em;
+    color: white;
+    display: flex;
+    max-width: 100%;
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(0, 0, 0, 0.020) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.nav__logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav--menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav--menu {
+    display: flex;
+    justify-content: space-between;
+    min-width: 40%;
+    margin-right: 16em;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hero--content--container{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.content--left{
+    margin-left: 7em;
+    max-width: 50%;
+}
+
+.content--title {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.content--subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 1em;
+    letter-spacing: 1.2px;
+}
+
+.content--btn {
+    text-decoration: none;
+    color: black;
+    background-color: #D4E8FF;
+    padding: .8em 1.5em;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-right: 5em;
+    display: inline-block;
+    transition: all .2s;
+}
+
+.content--btns{
+  min-width: 50%;
+  margin-top: 7em;
+}
+
+.main--btn{
+  background-color: #FFCE50;
+}
+
+.content--btn:hover {
+  transform: scale(1.02);
+}
+
+
+.content--btn:active {
+  transform: scale(0.98);
+}
+.content--right {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 6em;
+}
+
+.right--fish-1,
+.right--fish-2{
+    margin-bottom: 3em;
+    width: 256px;
+    height: 256px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 10%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.active {
+    border-bottom: 4px solid white;
+}
+
+/* Marine Life */
+.marinelife--container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.marinelife--title{
+  padding-top: 5em;
+  margin-left: 7em;
+  margin-bottom: 2em;
+}
+
+.marinelife--header--img{
+  width: 410px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform 200ms ease-in-out;
+}
+
+.media-element:hover .marinelife--header--img{
+  backdrop-filter: blur(2px);
+  filter: blur(2px);
+  transition: 200ms ease-in-out;
+  transform: scale(1.03);
+}
+
+.desc--container{
+  opacity: 0;
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  cursor: default;
+  text-align: center;
+}
+
+
+.jelly {
+  object-fit: cover;
+  object-position: 30% 30%;
+}
+
+.media-element:hover .desc--container{
+  opacity: 1;
+  transition: 200ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.img--container{
+  width: 100%;
+  position: relative;
+}
+
+
+/* Media Scroll */
+
+.media-scroller {
+  display: grid;
+  gap: 2em;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+  padding: 0 3em;
+  padding-bottom: .8em;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.media-element {
+  padding: 1em;
+}
+
+.snaps-inline{
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 2rem;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/* Events */
+
+
+.marinelife--events {
+  padding: 2em 4em;
+  display: grid;
+  grid-template-columns: 10% 60% 30%;
+  font-weight: 300;
+  gap: 3em;
+}
+
+.events--upcoming {
+  justify-self: center;
+}
+
+.events--today {
+  background: #D4E8FF;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1em 2em;
+}
+
+.events--next {
+  background: #D4E8FF;
+  text-align: center;
+  border-radius: 8px;
+  height: 23vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.events--next p {
+  margin: 1em;
+}
+
+.events--info {
+  font-weight: 300;
+  font-size: .85rem;
+  background: #B7D8FF99;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em 2em;
+  justify-self: center;
+  letter-spacing: .5px;
+}
+
+.events-info p {
+  margin-bottom: 1em;
+}
+
+.events--btn {
+  max-width: 39%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-decoration: none;
+  color: black;
+  background-color: #FFCE50;
+  padding: .8em 2.5em;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 1.2em;
+  transition: all 2ms;
+}
+
+.events--btn:hover {
+  transform: scale(1.02);
+}
+
+.events--btn:active {
+  transform: scale(0.98);
+}
+
+.events--extra{
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  justify-content: center;
+  color: #525252;
+}
+
+.events--extra h4 {
+  margin-bottom: 1em;
+}
+
+.events--extra span {
+  margin-left: 5em;
+}
+
+
+/* Gallery */
+
+.gallery--container{
+  max-height: 100vh;
+}
+
+.marinelife--gallery {
+  max-height: 65vh;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  row-gap: 2em;
+  justify-items: center;
+  margin: 0 3em;
+  padding: 2em 0;
+}
+
+.marinelife--gallery img {
+  width: 90%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery--img1{
+  grid-row: 1 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.gallery--img2 {
+  grid-row: 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.gallery--img3 {
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.gallery--img4 {
+  grid-row: 2 / 4;
+  justify-self: center;
+  align-self: center;
+}
+
+.gallery--img5 {
+  grid-row: 1 / -1;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Testimonials */
+
+.testimonials--container{
+  height: 55vh;
+}
+
+.testimonials--card{
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  grid-template-rows: 1fr 1fr;
+  height: 25vh;
+  background: #B7D8FF99;
+  margin: 0 4em;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+.testimonials--img {
+  width: 150px;
+  grid-row: 1 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.testimonials--review {
+  align-self: flex-end;
+  grid-column: 2 / 4;
+  font-weight: 300;
+  font-style: italic;
+
+}
+
+.testimonials--stars{
+  width: 150px;
+  align-self: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.testimonials--name{
+  justify-self: flex-end;
+  align-self: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-weight: 500;
+  color: #012340;
+  font-size: 1.2rem;
+}
+
+.arrows {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.fa-solid {
+  padding-right: 1em;
+  cursor: pointer;
+  transform: all 2s;
+  color:#012340;
+}
+
+.fa-solid:hover{
+  transform: scale(1.2);
+}
+
+.fa-solid:active{
+  transform: scale(0.98);
+}
+
+
+
+.booknow--container{
+  min-height: 90vh;
+  background: url(./img/booknow.jpg);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  color: white;
+}
+
+.blur {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height: 90vh;
+}
+
+.form--container{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10em;
+  margin-right: 10em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: 0;
+  padding: 1em;
+  text-indent: 1em;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1.3em;
+  margin: .5em 0;
+}
+
+.input--btn{
+  max-width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: #FFCE50;
+  padding: .8em 2.5em;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: all 2ms;
+}
+
+.input--btn:hover {
+  transform: scale(1.02);
+}
+
+.input--btn:active {
+  transform: scale(0.98);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: #012340;
+  color: #ffff;
+  font-weight: 300;
+}
+
+
+/* Media queries */
+
+@media (max-width: 1200px ) {
+  .hero--nav--container{
+    padding: 0;
+    padding-left: 2em;
+  }
+
+  .nav--menu {
+    margin-right: 2em;
+    min-width: 50%;
+  }
+
+  .content--left{
+    max-width: 80%;
+  }
+
+  .content--title{
+    letter-spacing: 5px;
+  }
+
+  .content--right{
+    display: none;
+  }
+
+  .content--btn{
+    text-align: center;
+  }
+
+  .content--btns{
+    display: flex;
+
+    margin-top: 2em;
+  }
+}
+
